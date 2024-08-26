@@ -30,8 +30,8 @@ def display_dashboard():
             st.header(exercise)
             
             # Get the last two sessions data for weights and reps
-            last_weights = get_last_n_rows_for_exercise(exercise, 2, '\data\weight_tracking_data.csv')
-            last_reps = get_last_n_rows_for_exercise(exercise, 2, '\data\reps_tracking_data.csv')
+            last_weights = get_last_n_rows_for_exercise(exercise, 2, '/data/weight_tracking_data.csv')
+            last_reps = get_last_n_rows_for_exercise(exercise, 2, '/data/reps_tracking_data.csv')
             
             if last_weights and last_reps:
                 for i, (weight, reps) in enumerate(zip(last_weights, last_reps)):
