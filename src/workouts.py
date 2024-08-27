@@ -57,8 +57,8 @@ def freakmode_day1():
             st.header(exercise)
             
             # Load and display previous session data for the exercise
-            weights = get_last_n_rows_for_exercise(exercise, default_sets, 'data\weight_tracking_data.csv')
-            reps_data = get_last_n_rows_for_exercise(exercise, default_sets, 'data\reps_tracking_data.csv')
+            weights = get_last_n_rows_for_exercise(exercise, default_sets, 'my_fitness_tracker/data/weight_tracking_data.csv')
+            reps_data = get_last_n_rows_for_exercise(exercise, default_sets, 'my_fitness_tracker/data/reps_tracking_data.csv')
             
             st.write("Poids précédents:", weights)
             st.write("Reps précédents:", reps_data)
@@ -104,8 +104,8 @@ def freakmode_day2():
             st.header(exercise)
             
             # Load and display previous session data for the exercise
-            weights = get_last_n_rows_for_exercise(exercise, default_sets, 'data\weight_tracking_data.csv')
-            reps_data = get_last_n_rows_for_exercise(exercise, default_sets, 'data\reps_tracking_data.csv')
+            weights = get_last_n_rows_for_exercise(exercise, default_sets, 'my_fitness_tracker/data/weight_tracking_data.csv')
+            reps_data = get_last_n_rows_for_exercise(exercise, default_sets, 'my_fitness_tracker/data/reps_tracking_data.csv')
             st.write("Poids précédents:", weights)
             st.write("Reps précédents:", reps_data)
             
@@ -149,8 +149,8 @@ def freakmode_day3():
             st.header(exercise)
             
             # Load and display previous session data for the exercise
-            weights = get_last_n_rows_for_exercise(exercise, default_sets, 'data\weight_tracking_data.csv')
-            reps_data = get_last_n_rows_for_exercise(exercise, default_sets, 'data\reps_tracking_data.csv')
+            weights = get_last_n_rows_for_exercise(exercise, default_sets, 'my_fitness_tracker/data/weight_tracking_data.csv')
+            reps_data = get_last_n_rows_for_exercise(exercise, default_sets, 'my_fitness_tracker/data/reps_tracking_data.csv')
             st.write("Poids précédents:", weights)
             st.write("Reps précédents:", reps_data)
             
@@ -196,8 +196,8 @@ def freakmode_day4():
 def save_weights_reps(exercise, set_number, weight, reps):
     '''Save the weights and reps to CSV files.'''
     # Load existing data or create new DataFrame if not exists
-    weights_df = load_from_csv('data\weight_tracking_data.csv')
-    reps_df = load_from_csv('data\reps_tracking_data.csv')
+    weights_df = load_from_csv('my_fitness_tracker/data/weight_tracking_data.csv')
+    reps_df = load_from_csv('my_fitness_tracker/data/reps_tracking_data.csv')
 
     # Check if the exercise column exists in the DataFrame, if not create it
     if exercise not in weights_df.columns:
@@ -214,8 +214,8 @@ def save_weights_reps(exercise, set_number, weight, reps):
     reps_df.loc[last_non_empty_reps_row + 1 if pd.notna(last_non_empty_reps_row) else 0, exercise] = reps
 
     # Save back to CSV
-    save_to_csv(weights_df, 'data\weight_tracking_data.csv')
-    save_to_csv(reps_df, 'data\reps_tracking_data.csv')
+    save_to_csv(weights_df, 'my_fitness_tracker/data/weight_tracking_data.csv')
+    save_to_csv(reps_df, 'my_fitness_tracker/data/reps_tracking_data.csv')
 
 
 
