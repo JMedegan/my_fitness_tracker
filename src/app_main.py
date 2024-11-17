@@ -1,6 +1,9 @@
 import streamlit as st
 import workouts
 
+
+
+
 # Configuration
 st.set_page_config(
     page_title="Fitness Tracker",
@@ -8,30 +11,33 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Styles
-SIDEBAR_STYLE = {
-    "background-color": "#f7f7f7",
-    "border": "1px solid #e0e0e0",
-    "padding": "10px"
-}
-HEADER_STYLE = {
-    "font-weight": "bold",
-    "font-size": "24px",
-    "margin-bottom": "15px",
-    "color": "#30475e"
-}
 
-# Main Function
-def main():
+def main() -> None:
+    """
+    Main function to run the Interactive Fitness Tracker application.
+
+    This function sets up the sidebar with a description of the app and 
+    initializes the main workout tracking functionality.
+
+    Features:
+    - Sidebar description and branding.
+    - Displays workout tracking and visualization functionality via `workouts.show()`.
+
+    Returns:
+        None: The function runs the Streamlit app interface.
+    """
+    # Sidebar Setup
     st.sidebar.markdown("## 🏋️ Fitness Tracker", unsafe_allow_html=True)
+    st.sidebar.markdown(
+        "The Interactive Fitness Tracker is a user-friendly tool designed to help you "
+        "visualize and analyze the evolution of your workout metrics over time."
+    )
     st.sidebar.markdown("---")
-    st.sidebar.markdown("🏠 [Accueil](#)")
-    st.sidebar.markdown("➕ [Ajouter un entraînement](#add_workout)")
-    st.sidebar.markdown("📅 [Historique](#history)")
-    st.sidebar.markdown("👤 [Profil](#profile)")
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("---")
+
+    # Main Content
     workouts.show()
 
+# Run the app
 if __name__ == '__main__':
     main()
+
