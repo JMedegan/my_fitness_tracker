@@ -24,7 +24,6 @@ Follow these steps to install and run the project locally:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/JMedegan/my_fitness_tracker.git
-   cd yourrepository
    ```
 
 2. **Install the dependencies**:
@@ -36,7 +35,7 @@ Follow these steps to install and run the project locally:
 3. **Run the Streamlit application**:
    Launch the app in your browser using the following command:
    ```bash
-   streamlit run app_main.py
+   streamlit run src/app_main.py
    ```
 
 ---
