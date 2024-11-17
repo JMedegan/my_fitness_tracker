@@ -1,0 +1,6 @@
+numpy==2.0.1
+pandas==2.2.2
+ruff==0.1.15
+streamlit==1.37.1
+st-gsheets-connection
+matplotlib
