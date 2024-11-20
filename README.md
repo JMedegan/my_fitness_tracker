@@ -32,7 +32,7 @@ Follow these steps to install and run the project locally:
    pip install -r requirements.txt
    ```
 
-3. **[Create a new Google Sheets file](https://github.com/streamlit/gsheets-connection)**:
+3. **[Create a new Google Sheets file](https://github.com/streamlit/gsheets-connection)**
 
 4. **Run the Streamlit application**:
    Launch the app in your browser using the following command:
