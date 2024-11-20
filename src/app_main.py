@@ -2,13 +2,9 @@ import streamlit as st
 import workouts
 
 
-
-
 # Configuration
 st.set_page_config(
-    page_title="Fitness Tracker",
-    layout="wide",
-    initial_sidebar_state="expanded"
+    page_title="Fitness Tracker", layout="wide", initial_sidebar_state="expanded"
 )
 
 
@@ -16,7 +12,7 @@ def main() -> None:
     """
     Main function to run the Interactive Fitness Tracker application.
 
-    This function sets up the sidebar with a description of the app and 
+    This function sets up the sidebar with a description of the app and
     initializes the main workout tracking functionality.
 
     Features:
@@ -37,7 +33,7 @@ def main() -> None:
     # Main Content
     workouts.show()
 
-# Run the app
-if __name__ == '__main__':
-    main()
 
+# Run the app
+if __name__ == "__main__":
+    main()
